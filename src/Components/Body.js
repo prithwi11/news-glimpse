@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from './Layer/Header'
 const Body = () => {
   return (
-    <div className='font-bold'>Body</div>
+    <div>
+      <Header />
+    </div>
   )
 }
 
