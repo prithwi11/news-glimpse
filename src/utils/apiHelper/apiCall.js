@@ -1,22 +1,14 @@
 import axios from  'axios'
 
-const api_call = async(api_url, method, body={}) => {
+const api_call = async (api_url, method, body = {}) => {
+    let response;
     if (method === 'POST') {
-        await axios.post(api_url, {payload : body})
-        .then(res => {
-            const data = res.data
-            return data
-        })
+        response = await axios.post(api_url, { payload: body });
+    } else { 
+        response = await axios.get(api_url);
     }
-    else {
-        console.log("get")
-        await axios.get(api_url)
-            .then(res => {
-                const data = res.data
-                return data
-            })
-    }
-
+    return response.data; 
 }
+
 
 export default api_call

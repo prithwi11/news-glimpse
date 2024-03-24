@@ -5,6 +5,7 @@ import CategoryWiseContent from './CategoryWiseContent'
 import api_call from '../../utils/apiHelper/apiCall'
 import { home_page_api_url } from '../../utils/apiHelper/apiUrl'
 import { BASE_URL } from '../../utils/constants/constants'
+import SubContent from './SubContent'
 
 const Home = () => {
   const [articles, setArticles] = useState(null)
@@ -27,7 +28,7 @@ const Home = () => {
       <Header />
       <div className='content z-50 '>
         <MainContent mainArticle={articles[0]} />
-        <CategoryWiseContent articles={articles} />
+        <SubContent  />
       </div>
     </div>
   )
