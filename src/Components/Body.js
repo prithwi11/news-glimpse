@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './Home'
+import Home from './Home/Home'
 import NewsCategory from './NewsCategory'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
