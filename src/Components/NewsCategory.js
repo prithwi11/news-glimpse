@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Header from './Layer/Header'
 const NewsCategory = () => {
   return (
-    <div>NewsCategory</div>
+    <div>
+      <Header />
+      <h1>NewsCategory</h1>
+    </div>
   )
 }
 

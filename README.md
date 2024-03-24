@@ -1,4 +1,4 @@
 - Project Initialisation
 - Header
     - Basic design
-    - Category listing with route configuration
+    - create all the neccessary component and add route

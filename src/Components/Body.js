@@ -1,9 +1,23 @@
 import React from 'react'
-import Header from './Layer/Header'
+import Home from './Home'
+import NewsCategory from './NewsCategory'
+
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 const Body = () => {
+  const appRouter = createBrowserRouter([
+    {
+      path : "/",
+      element : <Home />
+    },
+    {
+      path : "/category/:categoryIdentifier",
+      element : <NewsCategory />
+    }
+  ])
   return (
     <div>
-      <Header />
+      <RouterProvider router={appRouter} />
     </div>
   )
 }
