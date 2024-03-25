@@ -10,7 +10,7 @@ const Header = () => {
         <img className='p-2 m-2 w-44' src={ALL_IMAGE.logo_header} alt="logo"/>
         <div className='right-0 p-2 my-4 mx-4'>
           <div className=''>
-            <input type='text' className='p-2 m-2 rounded-sm' placeholder='Search' />
+            <input type='text' className='p-2 m-2 rounded-lg' placeholder='Search' />
             <button className='p-2 bg-red-600 text-white font-bold rounded-sm'>Search</button>
           </div>
         </div>

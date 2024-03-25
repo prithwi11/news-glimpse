@@ -3,6 +3,7 @@ import Home from './Home/Home'
 import NewsCategory from './NewsCategory'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import NewsDetails from './Home/NewsDetails'
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -13,6 +14,10 @@ const Body = () => {
     {
       path : "/category/:categoryIdentifier",
       element : <NewsCategory />
+    },
+    {
+      path : "/news-details",
+      element : <NewsDetails />
     }
   ])
   return (

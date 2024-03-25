@@ -28,7 +28,7 @@ const CategoryWiseContent = ({identifier, name}) => {
         <div className='flex overflow-x-hidden '>
           <div className='flex '> 
             {categoryWiseNews.map((category) => 
-              <NewsCart image={category.urlToImage} author={category.author} title={category.title} />
+              <NewsCart newsDetails={category} />
             )}
           </div>
         </div>
