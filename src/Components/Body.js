@@ -4,6 +4,7 @@ import NewsCategory from './NewsCategory'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import NewsDetails from './Home/NewsDetails'
+import SearchNews from './SearchNews'
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -18,6 +19,10 @@ const Body = () => {
     {
       path : "/news-details",
       element : <NewsDetails />
+    },
+    {
+      path : "/search-news/:searchText",
+      element : <SearchNews />
     }
   ])
   return (

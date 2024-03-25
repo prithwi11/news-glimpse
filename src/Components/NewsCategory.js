@@ -18,12 +18,15 @@ const NewsCategory = () => {
     const API_URL = BASE_URL + home_page_api_url + '?country=in&category='+categoryIdentifier+'&apiKey=' + process.env.REACT_APP_API_KEY
     const articleData = await api_call(API_URL, 'GET')
     const articles = articleData?.articles
-    setArticles(articles)
+    const newArticles = articles.filter((article) => {
+      return article.urlToImage != null
+    })
+    setArticles(newArticles)
   }
 
   useEffect(() => {
     fetchArticles()    
-  }, [])
+  }, [categoryIdentifier])
 
   if (!articles) return
   return (
