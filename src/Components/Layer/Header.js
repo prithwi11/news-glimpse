@@ -13,7 +13,9 @@ const Header = () => {
   return (
     <div className=' w-full bg-gray-800'>
       <div className='flex justify-between'>
-        <img className='p-2 m-2 w-44' src={ALL_IMAGE.logo_header} alt="logo"/>
+        <Link to='/'>
+          <img className='p-2 m-2 w-44 cursor-pointer' src={ALL_IMAGE.logo_header} alt="logo"/>
+        </Link>
         <div className='right-0 p-2 my-4 mx-4'>
           <div className=''>
             <input type='text' ref={searchText} className='p-2 m-2 rounded-lg' placeholder='Search' />
