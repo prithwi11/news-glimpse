@@ -1,8 +1,20 @@
 import React from 'react'
+import { addNewsDetails } from '../../utils/store/slices/newsDetailsSlice'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const MainContent = ({mainArticle}) => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const handleRedirectToNesDetails = () => {
+    dispatch(addNewsDetails(mainArticle))
+    window.localStorage.setItem('newsDetails', JSON.stringify(mainArticle))
+    navigate('/news-details')
+  }
+
   return (
-    <div className='p-2 my-2 relative w-3/4 cursor-pointer '>
+    <div className='p-2 my-2 relative w-3/4 cursor-pointer ' onClick={handleRedirectToNesDetails}>
         <div className='-z-20'>
             <img className='w-full rounded-lg' src={mainArticle.urlToImage} alt='main-content' />
         </div>    

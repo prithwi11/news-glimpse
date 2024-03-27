@@ -9,7 +9,6 @@ const NewsCart = ({newsDetails}) => {
   const navigate = useNavigate()
   
   const handleRedirectToNesDetails = () => {
-    console.log('newsDetails', newsDetails)
     dispatch(addNewsDetails(newsDetails))
     window.localStorage.setItem('newsDetails', JSON.stringify(newsDetails))
     navigate('/news-details')
