@@ -1,10 +1,10 @@
 
-Project Name: News Glimpse
+**Project Name**: News Glimpse
 
-Overview:
+**Overview:**
 The News Aggregator is a web application developed to provide users with categorized news articles fetched from the NewsAPI. It offers features such as browsing news by category, searching for specific news articles, and viewing detailed information about individual news articles.
 
-Features:
+**Features:**
 1. Landing Page:
     Displays category-wise news cards with a main news article highlighted in a prominent card.
     Category Pages:
@@ -18,13 +18,13 @@ Features:
     Displays detailed information about individual news articles.
     Utilizes Redux to manage state, ensuring efficient storage and retrieval of news details when users interact with the application.
 
-Technologies Used:
+**Technologies Used:**
 1. React.js: Frontend development framework for building user interfaces.
 2. Redux: State management library for managing application state efficiently.
 3. NewsAPI: External API used for fetching news articles.
 4. Tailwind css: Markup and styling languages for designing and formatting web pages.
 
-How to Run:
+**How to Run:**
 1. Clone the repository from Github : git clone [repository link](https://github.com/prithwi11/news-glimpse.git)
 2. cd news-glimpse
 3. Generate an API key from NewsAPI:
@@ -35,14 +35,14 @@ How to Run:
 5. npm install
 6. npm start
 
-Usage:
+**Usage:**
 1. Upon launching the application, users will land on the homepage displaying category-wise news cards and a main news article.
 2. Users can click on a specific category to view news articles related to that category.
 3. The search functionality allows users to enter keywords and find relevant news articles.
 4. Clicking on a news article will redirect users to a detailed view of that article, where they can read more information.
 
-Contributors:
+**Contributors:**
 Prithwiraj Bhadra - [profile link](https://github.com/prithwi11)
 
-License:
+**License:**
 This project is licensed under the MIT License.
