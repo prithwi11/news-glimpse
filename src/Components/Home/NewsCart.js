@@ -19,7 +19,7 @@ const NewsCart = ({newsDetails}) => {
     <div className='group w-1/4 pr-4 min-w-[500px] p-4 mx-2 relative cursor-pointer rounded-xl ' onClick={handleRedirectToNesDetails}>
         <img className='aspect-square rounded-xl group-hover:opacity-50 transition-opacity duration-300' alt='moviecard' src={ newsDetails.urlToImage }></img>
         <div className='absolute  bg-black opacity-0 group-hover:opacity-90 transition-opacity duration-300'></div>
-        <div className='w-2/3 bottom-7 p-2 mx-3 bg-white z-50 absolute  opacity-90'>
+        <div className='w-2/3 bottom-7 p-2 mx-3 bg-white z-50 absolute  opacity-90 border-2 border-black'>
             <h1 className='font-bold text-sm p-2 mx-3'>{newsDetails.title}</h1>
             <h3>{newsDetails.author ? `by - ${newsDetails.author}` : ''}</h3>
         </div>

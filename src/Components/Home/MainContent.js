@@ -18,7 +18,7 @@ const MainContent = ({mainArticle}) => {
         <div className='-z-20'>
             <img className='w-full rounded-lg' src={mainArticle.urlToImage} alt='main-content' />
         </div>    
-        <div className='bottom-7 p-8 mx-3 bg-white z-50 absolute  text-wrap break-words opacity-90'>
+        <div className='bottom-7 p-8 mx-3 bg-white z-50 absolute  text-wrap break-words opacity-90 border-2 border-black'>
             <h1 className='font-bold text-3xl p-2 mx-3'>{mainArticle.title}</h1>
             <h3>{mainArticle.author ? `by - ${mainArticle.author}` : ''}</h3>
         </div>
