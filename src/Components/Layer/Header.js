@@ -22,16 +22,23 @@ const Header = () => {
   const handleSearchNews = () => {
     navigate('/search-news/'+searchText.current.value)
   }
+
+  const handleLoginClick = () => {
+    navigate('/login')
+  }
   return (
     <div className=' w-full bg-gray-800'>
       <div className='flex justify-between'>
-        <Link to='/'>
+        <Link to='/' className=''>
           <img className='p-2 m-2 w-44 cursor-pointer' src={ALL_IMAGE.logo_header} alt="logo"/>
         </Link>
         <div className='right-0 p-2 my-4 mx-4'>
           <div className=''>
             <input type='text' ref={searchText} className='p-2 m-2 rounded-lg' placeholder='Search' />
             <button className='p-2 bg-red-600 text-white font-bold rounded-sm' onClick={handleSearchNews}>Search</button>
+          </div>
+          <div>
+          <button className='p-2 bg-red-600 text-white font-bold rounded-sm' onClick={handleLoginClick}>Sign in</button>
           </div>
         </div>
       </div>
