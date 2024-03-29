@@ -7,6 +7,7 @@ import NewsDetails from './Home/NewsDetails'
 import SearchNews from './SearchNews'
 import Login from './User/Login'
 import Signup from './User/Signup'
+import Weather from './Weather'
 
 const Body = () => {
   const appRouter = createBrowserRouter([
@@ -33,6 +34,10 @@ const Body = () => {
     {
       path : "/signup",
       element : <Signup />
+    },
+    {
+      path : "/weather",
+      element : <Weather />
     }
   ])
   return (
