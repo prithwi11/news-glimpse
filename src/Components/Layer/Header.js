@@ -38,7 +38,6 @@ const Header = () => {
             <button className='p-2 bg-red-600 text-white font-bold rounded-sm' onClick={handleSearchNews}>Search</button>
           </div>
           <div>
-          <button className='p-2 bg-red-600 text-white font-bold rounded-sm' onClick={handleLoginClick}>Sign in</button>
           </div>
         </div>
       </div>
