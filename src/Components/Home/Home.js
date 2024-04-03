@@ -29,10 +29,10 @@ const Home = () => {
   return (
     <div className='body'>
       <Header />
-      {/* <div className='content z-50 '>
+      <div className='content z-50 '>
         <MainContent mainArticle={articles[0]} />
         <SubContent  />
-      </div> */}
+      </div>
     </div>
   )
 }

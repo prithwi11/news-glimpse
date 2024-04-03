@@ -7,7 +7,7 @@ import NewsDetails from './Home/NewsDetails'
 import SearchNews from './SearchNews'
 import Login from './User/Login'
 import Signup from './User/Signup'
-import Weather from './Weather'
+import Weather from './Weather/Home'
 
 const Body = () => {
   const appRouter = createBrowserRouter([
