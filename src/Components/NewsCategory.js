@@ -32,14 +32,12 @@ const NewsCategory = () => {
   return (
     <div>
       <Header />
-        <div className='max-w-full overflow-hidden'>
+        <div className='max-w-full '>
           <h1 className='p-2 m-2 font-bold text-3xl'>{categoryName[0]?.name}</h1>
-          <div className=' overflow-x-hidden'>
-            <div className=''> 
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
               {articles.map((category) => 
                 <NewsCart newsDetails={category} />
               )}
-            </div>
           </div>
         </div>
     </div>

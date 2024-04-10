@@ -11,7 +11,7 @@ const DailyWeather = () => {
                 <div className="flex items-center justify-end w-1/4 pr-10">
                     <span className="font-semibold">{dailyData.humidity}%</span>
                 </div>
-                <img className="h-8 fill-current w-8" src={dailyData.icon} />
+                <img className="h-8 fill-current w-8" src={dailyData.icon} alt='daily-weather-icon' />
                 <span className="font-semibold text-lg w-1/4 text-right">{dailyData.tempDetails}</span>
             </div>
         )}    

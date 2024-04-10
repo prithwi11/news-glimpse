@@ -48,7 +48,7 @@ const SearchNews = () => {
                 <div className='p-2 m-2 border-b-2 border-b-gray-500'>
                     <p className='opacity-50 text-lg'>Showing {totalArticles} results for </p>
                     <div className='p-2 flex'>
-                        <img className='w-20 h-20' src={ALL_IMAGE.search}></img>
+                        <img className='w-20 h-20' src={ALL_IMAGE.search} alt='search-icon' />
                         <h1 className='text-3xl p-2 m-2 opacity-80'>{searchText}</h1>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ const SearchNews = () => {
                     articles.map((article) =>
                         <div key={article.title} className='border-b-2 border-b-gray-500'>
                             <div className='flex py-2 m-2 bg-white cursor-pointer' onClick={() => handleRedirectToNesDetails(article)}>
-                                <img className='w-48 rounded-lg' src={article.urlToImage} />
+                                <img className='w-48 rounded-lg' src={article.urlToImage} alt='search-news' />
                                 <h1 className='p-2 m-2 text-xl font-bold hover:opacity-50'>{article.title}</h1>
                             </div> 
                             <div className='px-2 mx-8 my-4'>

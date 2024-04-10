@@ -1,5 +1,5 @@
 import React from 'react'
-import { UseSelector, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 import Header from '../Layer/Header'
 
 const NewsDetails = () => {
@@ -14,7 +14,7 @@ const NewsDetails = () => {
                 <p className='py-2 opacity-60'>{newsDetails?.source?.name} | {newsDetails?.publishedAt}</p>
             </div>        
             <div className='p-2 m-2 rounded-xl'>
-                <img className='w-screen' src={newsDetails?.urlToImage}></img>
+                <img className='w-screen' src={newsDetails?.urlToImage} alt='news-details'></img>
             </div>
             <div className='p-2 m-2 text-xl'>
                 <p>{newsDetails?.content}</p>

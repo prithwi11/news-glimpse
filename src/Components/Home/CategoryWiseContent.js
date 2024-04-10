@@ -59,24 +59,10 @@ const CategoryWiseContent = ({identifier, name}) => {
     <div className='slider-container'>
         <h1 className='p-2 m-2 font-bold text-3xl'>{name}</h1>
        <Slider {...settings} className='p-4 mx-8'>
-          {/* <div  className='flex overflow-x-hidden scroll-smooth' id='slider'> */}
             {categoryWiseNews.map((category) => 
               <NewsCart key={category.identifier} newsDetails={category} />
             )}
-          {/* </div> */}
         </Slider>
-      {/* <div className=''>
-        <h1 className='p-2 m-2 font-bold text-3xl'>{name}</h1>
-        <MdChevronLeft size={40} onClick={slideLeft} className='z-50 cursor-pointer' />         
-            <div className='relative flex items-center w-full'>    
-              <div  className='flex overflow-x-hidden scroll-smooth' id='slider'>
-                {categoryWiseNews.map((category) => 
-                  <NewsCart key={category.identifier} newsDetails={category} />
-                )}
-              </div>
-            </div>
-        <MdChevronRight size={40} onClick={slideRight} className='cursor-pointer'/>
-      </div> */}
     </div>
   )
 }

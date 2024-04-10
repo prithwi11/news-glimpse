@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../Layer/Header'
 import MainContent from './MainContent'
-import CategoryWiseContent from './CategoryWiseContent'
 import api_call from '../../utils/apiHelper/apiCall'
 import { home_page_api_url } from '../../utils/apiHelper/apiUrl'
 import { BASE_URL } from '../../utils/constants/constants'

@@ -34,7 +34,7 @@ const Header = () => {
     if(param && param.hasOwnProperty('categoryIdentifier')) {
       const {categoryIdentifier} = param
       const categoryName = NEWS_CATEGORIES.filter((category) => {
-        return category.identifier == categoryIdentifier
+        return category.identifier === categoryIdentifier
       })
       setCategoryName(categoryName[0].name)
     } 
@@ -72,10 +72,10 @@ const Header = () => {
         </ul>
         <ul className='flex justify-center items-center  '>
           <Link to={'/weather'} className='p-2 m-2 right-4 flex hover:text-red-600 cursor-pointer'>
-            <img className='w-8 h-8 to-white' src={ALL_IMAGE.MAP_IMAGE} />
+            <img className='w-8 h-8 to-white' alt='header-weather-identifier' src={ALL_IMAGE.MAP_IMAGE} />
             <p className='p-2'>Kolkata</p>
             <div className='text-gray-600 shadow-emerald-400'> 
-              <img className='w-15 h-15 px-2 -my-7 ' src={OPEN_WEATHER_IMAGE_BASE_URL + weatherData?.currentWeather?.weather[0]?.icon + OPEN_WEATHER_IMAGE_SUFFIX}/>
+              <img className='w-15 h-15 px-2 -my-7 ' alt='header-weather-icon' src={OPEN_WEATHER_IMAGE_BASE_URL + weatherData?.currentWeather?.weather[0]?.icon + OPEN_WEATHER_IMAGE_SUFFIX}/>
             </div>
             <p className='p-2'>{kelvinToCelsius(weatherData?.currentWeather?.main?.temp)} °c</p>
           </Link>
