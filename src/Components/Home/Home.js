@@ -5,6 +5,7 @@ import api_call from '../../utils/apiHelper/apiCall'
 import { home_page_api_url } from '../../utils/apiHelper/apiUrl'
 import { BASE_URL } from '../../utils/constants/constants'
 import SubContent from './SubContent'
+import Modal from '../Modal'
 
 const Home = () => {
   const [articles, setArticles] = useState(null)
@@ -30,11 +31,13 @@ const Home = () => {
   return (
     <div className='body'>
       <Header />
-      {articles && (
+      {articles ? (
         <div className='content z-50 '>
           <MainContent mainArticle={articles[0]} />
           <SubContent  />
         </div>
+      ) : (
+        <Modal />
       )
       }
     </div>
