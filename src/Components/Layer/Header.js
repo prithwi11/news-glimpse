@@ -22,8 +22,11 @@ const Header = () => {
       if (Object.keys(position).length !== 0) {
         currentWeather = await getCurrentWeather(position)
       }
-      dispatch(addCurrentWeather(currentWeather.response))
-      return currentWeather
+      if (currentWeather) {
+        dispatch(addCurrentWeather(currentWeather.response))
+        return currentWeather
+      }
+      
     }
     fetchWeatherData()
   }, [])
@@ -70,16 +73,18 @@ const Header = () => {
             </li>
         )}
         </ul>
-        <ul className='flex justify-center items-center  '>
-          <Link to={'/weather'} className='p-2 m-2 right-4 flex hover:text-red-600 cursor-pointer'>
-            <img className='w-8 h-8 to-white' alt='header-weather-identifier' src={ALL_IMAGE.MAP_IMAGE} />
-            <p className='p-2'>Kolkata</p>
-            <div className='text-gray-600 shadow-emerald-400'> 
-              <img className='w-15 h-15 px-2 -my-7 ' alt='header-weather-icon' src={OPEN_WEATHER_IMAGE_BASE_URL + weatherData?.currentWeather?.weather[0]?.icon + OPEN_WEATHER_IMAGE_SUFFIX}/>
-            </div>
-            <p className='p-2'>{kelvinToCelsius(weatherData?.currentWeather?.main?.temp)} °c</p>
-          </Link>
-        </ul>
+        {weatherData && weatherData.currentWeather && (
+          <ul className='flex justify-center items-center  '>
+            <Link to={'/weather'} className='p-2 m-2 right-4 flex hover:text-red-600 cursor-pointer'>
+              <img className='w-8 h-8 to-white' alt='header-weather-identifier' src={ALL_IMAGE.MAP_IMAGE} />
+              <p className='p-2'>Kolkata</p>
+              <div className='text-gray-600 shadow-emerald-400'> 
+                <img className='w-15 h-15 px-2 -my-7 ' alt='header-weather-icon' src={OPEN_WEATHER_IMAGE_BASE_URL + weatherData?.currentWeather?.weather[0]?.icon + OPEN_WEATHER_IMAGE_SUFFIX}/>
+              </div>
+              <p className='p-2'>{kelvinToCelsius(weatherData?.currentWeather?.main?.temp)} °c</p>
+            </Link>
+          </ul>
+        )}
       </div>
     </div>
   )

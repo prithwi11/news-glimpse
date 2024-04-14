@@ -12,26 +12,31 @@ const Home = () => {
   const fetchArticles = async() => {
     const API_URL = BASE_URL + home_page_api_url + '?country=in&apiKey=' + process.env.REACT_APP_API_KEY
     const articleData = await api_call(API_URL, 'GET')
-    const articles = articleData?.articles
-    const newArticles = articles.filter((article) => {
-      return article.urlToImage != null
-    })
-    setArticles(newArticles)
+    if(articleData) {
+      const articles = articleData?.articles
+      const newArticles = articles.filter((article) => {
+        return article.urlToImage != null
+      })
+      setArticles(newArticles)
+    }
+    
   }
 
   useEffect(() => {
     fetchArticles()    
   }, [])
 
-  if (!articles) return
 
   return (
     <div className='body'>
       <Header />
-      <div className='content z-50 '>
-        <MainContent mainArticle={articles[0]} />
-        <SubContent  />
-      </div>
+      {articles && (
+        <div className='content z-50 '>
+          <MainContent mainArticle={articles[0]} />
+          <SubContent  />
+        </div>
+      )
+      }
     </div>
   )
 }

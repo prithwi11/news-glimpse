@@ -27,12 +27,14 @@ const SearchNews = () => {
     const fetchArticles = async() => {
         const API_URL = BASE_URL + search_api_url + searchText + '&apiKey='+process.env.REACT_APP_API_KEY
         const articleData = await api_call(API_URL, 'GET')
-        const articles = articleData?.articles
-        const newArticles = articles.filter((article) => {
-            return article.urlToImage != null
-        })
-        setArticles(newArticles)
-        setTotalArticles(newArticles.length)
+        if (articleData) {
+            const articles = articleData?.articles
+            const newArticles = articles.filter((article) => {
+                return article.urlToImage != null
+            })
+            setArticles(newArticles)
+            setTotalArticles(newArticles.length)
+        }
     }
 
     useEffect(() => {

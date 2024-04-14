@@ -17,21 +17,23 @@ const NewsCategory = () => {
   const fetchArticles = async() => {
     const API_URL = BASE_URL + home_page_api_url + '?country=in&category='+categoryIdentifier+'&apiKey=' + process.env.REACT_APP_API_KEY
     const articleData = await api_call(API_URL, 'GET')
-    const articles = articleData?.articles
-    const newArticles = articles.filter((article) => {
-      return article.urlToImage != null
-    })
-    setArticles(newArticles)
+    if (articleData) {
+      const articles = articleData?.articles
+      const newArticles = articles.filter((article) => {
+        return article.urlToImage != null
+      })
+      setArticles(newArticles)
+    }
   }
 
   useEffect(() => {
     fetchArticles()    
   }, [categoryIdentifier])
 
-  if (!articles) return
   return (
     <div>
       <Header />
+      {articles && (
         <div className='max-w-full '>
           <h1 className='p-2 m-2 font-bold text-3xl'>{categoryName[0]?.name}</h1>
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4'>
@@ -40,6 +42,8 @@ const NewsCategory = () => {
               )}
           </div>
         </div>
+      )
+      }
     </div>
   )
 }
